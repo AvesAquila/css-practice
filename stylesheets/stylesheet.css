@@ -1,0 +1,102 @@
+ul {
+  /*type none removes bullets*/
+  list-style-type: none;
+
+  width: 100%;
+
+  /*insures there is no extra space around the nav bar*/
+  margin: 0;
+  padding: 0;
+
+  /*if anything doesn't fit in the nav bar, it is hidden*/
+  overflow: hidden;
+
+  /*changes colour of the nav bar*/
+  background-color: rgb(0, 0, 0);
+}
+
+li {
+  float: left;
+}
+
+/*link text formatting*/
+li a {
+  font-family: Arial, Helvetica, sans-serif;
+
+  /*sets the text in a block*/
+  display: block;
+
+  /*sets text colour*/
+  color: rgb(236, 236, 236);
+
+  /*center the text in its box*/
+  text-align: center;
+
+  /*gives space around the text, expands box*/
+  padding: 14px 16px;
+
+  /*sets to standard text*/
+  text-decoration: none;
+}
+
+/*Changes the link colour on hover*/
+li a:hover {
+  background-color: rgb(15, 12, 15);
+}
+
+/*active page is highlighted*/
+.active {
+  background-color: rgb(33, 76, 229);
+}
+
+/*changes background colour of header*/
+header {
+  background-color: rgb(34, 33, 36);
+}
+
+body {
+  background-color: rgb(47, 46, 49);
+  color: rgb(236, 236, 236);
+}
+
+.right {
+  display: block;
+  float: right;
+  margin-top: 3%;
+  margin-right: 5%;
+  width: 12%;
+}
+
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+  font-size: 40px;
+
+  display: inline-block;
+}
+
+sub {
+  font-size: 20px;
+}
+
+.lb-circle {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(36, 101, 241);
+  border-radius: 50%;
+
+  float: right;
+  margin: 5%;
+  margin-top: 7%;
+}
+
+.db-circle {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(33, 76, 229);
+  border-radius: 50%;
+
+  float: right;
+  margin: 5%;
+  margin-top: 7%;
+}
