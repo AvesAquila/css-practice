@@ -4,22 +4,67 @@
     <style>
       body {
         background-color: #fbfbfe;
-        color: #17230b;
+        color: #273552;
+      }
+
+      /*styles ul in nav*/
+      nav ul {
+        list-style: none;
+      }
+
+      /*styles li in ul in nav*/
+      nav ul li {
+        margin: 10px;
+        font-size: 20px;
+      }
+
+      .nav-link {
+        padding: 5px;
+        margin: 4px;
+        border: 2px solid black;
+
+        background-color: #191970;
+        color: #f5f5ff;
+      }
+
+      li:has(> a.nav-link) {
+        display: inline-block;
       }
 
       h1 {
         text-align: center;
         font-size: 40px;
+        color: #141d2e;
+      }
+
+      div {
+        background-color: rgb(224, 246, 253);
+        width: auto;
+        height: 200px;
+        border: 4px solid #95abda;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-align: center;
       }
 
       p {
         font-size: 24px;
       }
+
+      #styled-by-id {
+        font-family: Georgia, "Times New Roman", Cambria, serif;
+        font-weight: bold;
+      }
+
+      span {
+        text-decoration: underline;
+        font-style: italic;
+      }
     </style>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Internal CSS</title>
+    <title>Divs and Spans</title>
   </head>
   <body>
     <nav>
@@ -48,9 +93,13 @@
       </ul>
     </nav>
     <main>
-      <h1>Internal CSS</h1>
+      <h1>Divs and Spans</h1>
 
-      <p>This page shows the effects of adding internal CSS to HTML documents</p>
+      <div>
+        <p>This page shows the effects of Divs and Spans, but isn't proper practice</p>
+
+        <p id="styled-by-id">This paragraph wil show the effect of giving an element an ID and <span>styling</span> that ID</p>
+      </div>
     </main>
   </body>
 </html>
