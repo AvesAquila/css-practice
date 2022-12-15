@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /*Sourced from uigradients.com*/
+      body {
+        background: #5c258d; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #4389a2, #5c258d); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #4389a2, #5c258d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      section {
+        background-color: antiquewhite;
+        width: 75%;
+        padding: 1%;
+        margin: 10%;
+
+        transform: skew(89.9deg);
+      }
+      h1 {
+        font-size: 32px;
+        text-align: center;
+
+        transform: scaleY(50);
+      }
+      p {
+        font-size: 16px;
+        margin: 8px 3%;
+        font-style: italic;
+
+        transform: translate(10px, 6px);
+
+        /* transform: rotate(90deg); */
+      }
+
+      .spinner {
+        margin: 10px;
+        width: 180px;
+        height: 180px;
+
+        animation: rotate 2s linear infinite;
+      }
+
+      @keyframes rotate {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .spinner-dot {
+        stroke: #0f360e;
+        stroke-width: 1;
+        fill: #0f360e;
+
+        animation: skew 2s linear infinite alternate;
+      }
+
+      @keyframes skew {
+        from {
+          transform: skewX(10deg);
+        }
+        to {
+          transform: skewX(40deg);
+        }
+      }
+
+      .spinner-border {
+        fill: transparent;
+        stroke-width: 2;
+        width: 100%;
+        height: 100%;
+      }
+
+      .path {
+        stroke-dasharray: 170;
+        stroke-dashoffset: 20;
+      }
+
+      #back-to-top {
+        animation: spinning 5s infinite;
+
+        /* height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background-color: rgb(11, 85, 85);
+        display: inline-block;
+        background: -webkit-radial-gradient(#cc95c0, #dbd4b4, #7aa1d2); */
+
+        display: flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: -webkit-flex;
+
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+
+        width: 80px;
+        height: 80px;
+
+        -ms-flex-pack: center;
+        -moz-box-pack: center;
+        -webkit-box-pack: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        border: #121212 solid 2px;
+
+        -moz-border-radius: 40px;
+        -webkit-border-radius: 40px;
+        border-radius: 40px;
+
+        background: -webkit-radial-gradient(#e6c6df, #dbd4b4, #7aa1d2);
+        background: -moz-radial-gradient(#e6c6df, #dbd4b4, #7aa1d2);
+        background: -o-radial-gradient(#e6c6df, #dbd4b4, #7aa1d2);
+        background: radial-gradient(#e6c6df, #dbd4b4, #7aa1d2);
+
+        color: #313131;
+
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      @keyframes spinning {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <title>Transforming</title>
+  </head>
+  <body id="top">
+    <section>
+      <h1>Transforming</h1>
+      <p>Transforming</p>
+    </section>
+
+    <svg class="spinner" viewBox="0 0 66 66" xmlns="https://www.w3.org/2000/svg">
+      <circle class="path spinner-border" cx="33" cy="33" r="31" stroke="url(#gradient)"></circle>
+
+      <linearGradient id="gradient">
+        <stop offset="50%" stop-color="#0f360e" stop-opacity="1"></stop>
+        <stop offset="65%" stop-color="#0f360e" stop-opacity=".5"></stop>
+        <stop offset="100%" stop-color="#0f360e" stop-opacity="0"></stop>
+      </linearGradient>
+
+      <circle class="path spinner-dot" cx="37" cy="3" r="2"></circle>
+    </svg>
+
+    <a href="#top" id="back-to-top"> Back to Top </a>
+  </body>
+</html>
