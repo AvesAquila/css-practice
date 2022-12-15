@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Navigation</title>
+    <style>
+      body {
+        background-color: #1d1d1d;
+
+        padding: 0%;
+        margin: 0%;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        /*
+          creates state fo rbefor ethe animation takes place so that the transition can fade in and drop down into place
+        */
+        opacity: 0;
+        transform: translateY(-100px);
+
+        /*
+          This defines our animation-name, here it is fade in
+          We define the animation-duration, how long it will last, as 0.5 seconds
+          The animation-timing-funtion specifies the speed curve of the animation, here it is set as ease-in
+          the delay before the animation starts is 0.2 seconds
+          The animation-fill-mode specifies what happens when the animation ceases to play, 
+          here with forwards it retains style values set by the last keyframe
+        */
+        -o-animation: fade-in 0.5s ease-in 0.2s forwards;
+        -moz-animation: fade-in 0.5s ease-in 0.2s forwards;
+        -webkit-animation: fade-in 0.5s ease-in 0.2s forwards;
+        animation: fade-in 0.5s ease-in 0.2s forwards;
+      }
+
+      /*
+        This defines the animation itself, it create animations using keyframes and then fills the blanks inbetween 
+        the properties that are placed. It can be done with for and to as seen here or with percentages.
+      */
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      nav ul {
+        list-style-type: none;
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+        overflow: hidden;
+
+        background: -webkit-linear-gradient(150deg, #eef2f3, #8e9eab);
+        background: -o-linear-gradient(150deg, #eef2f3, #8e9eab);
+        background: -moz-linear-gradient(150deg, #eef2f3, #8e9eab);
+        background: linear-gradient(150deg, #eef2f3, #8e9eab);
+      }
+
+      nav li {
+        float: left;
+      }
+
+      nav li a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 20px 50.55px;
+
+        background-color: #2c2c2c;
+        color: #f3efea;
+
+        -moz-transitions: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+        -webkit-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+        -o-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+        transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+      }
+
+      nav a:hover,
+      nav a:focus {
+        background-color: rgba(44, 44, 44, 0);
+        color: black;
+
+        /* transform: translateY(-10px); */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inline CSS</a></li>
+          <li><a href="internal-css.html">Internal CSS</a></li>
+          <li><a href="external-css.html">External CSS</a></li>
+          <li><a href="testing-cascading.html">Testing Cascading</a></li>
+          <li><a href="playing-with-external.html">Playing with External CSS</a></li>
+          <li><a href="classes-and-ids.html">CSS Classes and IDs</a></li>
+          <li><a href="div-and-span.html">Divs and Spans</a></li>
+          <li><a href="backgrounds-and-text.html">Backgrounds and Text</a></li>
+          <li><a href="gradients.html">Gradients</a></li>
+          <li><a href="transforms.html">Transforms</a></li>
+          <li><a href="transitions-and-animations.html">Transitions and Animations</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main></main>
+  </body>
+</html>
